@@ -46,3 +46,53 @@
 .vertical-align-top {
     vertical-align: top;
 }
+
+.vertical-align-center {
+    vertical-align: middle;
+}
+
+.height-40 {
+    height: 40px;
+}
+
+.font-bold {
+    font: bold;
+    color: black;
+    font-size: 12px;
+}
+
+.font-blue-bold {
+    font: bold 12px arial;
+    color: cornflowerblue;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.font-black-bold {
+    font: bold 12px arial;
+    color: black;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.redfonts {
+    color: #b4051b;
+    font-size: 11px;
+    font: bold;
+}
+
+.greenfonts {
+    color: #1ea330;
+    font-size: 11px;
+    font: bold;
+}
+
+.grayfonts {
+    color: gray;
+    font-size: 11px;
+    font: bold;
+}
+
+.thin-gray-botton-border {
+    border-bottom: thin solid #DAE3E6;
+}

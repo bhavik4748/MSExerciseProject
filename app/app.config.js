@@ -8,6 +8,7 @@ app.controller('DemoAppController', ['$scope', '$http', function ($scope, $http)
     $scope.propertyName = null;
     $scope.reverse = false;
 
+    $scope.redfonts = "redfonts";
     $scope.sort = function (obj) {
         //switch (obj) {
         //    case 1: sObj.accSort = 1;
@@ -22,10 +23,19 @@ app.controller('DemoAppController', ['$scope', '$http', function ($scope, $http)
         $scope.propertyName = propertyName;
     };
 
-    $http.get('/app/data.json').then(function (response) { 
+    $http.get('/app/data.json').then(function (response) {
         $scope.dataapi = response.data;
     }, function (reject) {
         return false;
     });
-  
+
+    $scope.checkValue = function (val) {
+
+        if (val.percentChange == 0)
+            return 'grayfonts';
+        else if (val.percentChange > 0)
+            return 'greenfonts';
+        else
+            return 'redfonts'
+    }
 }]);

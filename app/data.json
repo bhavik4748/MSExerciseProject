@@ -1,27 +1,39 @@
 ﻿[
   {
     "name": "AAA - 0029",
-    "availablecash": 39160334.42
+    "availablecash": 39160334.42,
+    "percentChange": -0.07,
+    "valueChange": 31435.87
   },
   {
     "name": "IRA - 0146",
-    "availablecash": 15884302.89
+    "availablecash": 15884302.89,
+    "percentChange": 0.03,
+    "valueChange": 7430.83
   },
   {
     "name": "AAA - 1812",
-    "availablecash": 2010926.10
+    "availablecash": 2010926.10,
+    "percentChange": 0.21,
+    "valueChange": 38861.63
   },
   {
     "name": "REG - 2019",
-    "availablecash": 13465679.34
+    "availablecash": 13465679.34,
+    "percentChange": 0.00,
+    "valueChange": 0.0
   },
   {
     "name": "AAA - 3810",
-    "availablecash": 10050054.07
+    "availablecash": 10050054.07,
+    "percentChange": 0.07,
+    "valueChange": 8916.69
   },
   {
     "name": "IRA - 5200",
-    "availablecash": 5763.76
+    "availablecash": 5763.76,
+    "percentChange": -0.07,
+    "valueChange": 8916.69
   }
   
 ]

@@ -12,20 +12,20 @@
     <script src="app/app.config.js"></script>
 </head>
 
-<body ng-app="DemoApp" ng-strict-di style="background-color: #0026ff">
+<body ng-app="DemoApp" ng-strict-di style="background-color: #0D75AC">
     <div ng-controller="DemoAppController">
         <div class="col-xs-12 col-sm-12 col-md-12" style="padding-top:10px;padding-left:10px; padding-right:10px;">
             <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
-            <div class="col-xs-12 col-sm-12 col-md-8 " style="background-color:floralwhite">
+            <div class="col-xs-12 col-sm-12 col-md-8 thin-gray-botton-border " style="background-color:#f7f2f2;">
                 <div>
-                    <div ng-click="sortBy('name')" class="col-xs-6 col-sm-6 col-md-6">
-                        <span class="btn1 btn-link pad-none"><br />Account</span>
+                    <div ng-click="sortBy('name')" class="col-xs-6 col-sm-6 col-md-6 text-left pad-none">
+                        <span class="btn1 btn-link pad-none font-bold"><br />Account</span>
                         <span class="sortorder vertical-align-bottom" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
                     </div>
 
                     <div ng-click="sortBy('availablecash')" class="col-xs-6 col-sm-6 col-md-6 text-right">
                         <span class="sortorder pad-none vertical-align-top" ng-show="propertyName === 'availablecash'" ng-class="{reverse: reverse}"></span>
-                        <span class="btn1 btn-link pad-none"> Available Cash<br />Today's Change</span>
+                        <span class="btn1 btn-link pad-none font-bold"> Available Cash<br />Today's Change</span>
                     </div>
                 </div>
             </div>
@@ -33,15 +33,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12" style="padding-left:10px; padding-right:10px;">
             <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
-            <div class="col-xs-12 col-sm-12 col-md-8" style="background-color:white">
-                <div ng-repeat="record in dataapi | orderBy:propertyName:reverse">
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-
-                        {{record.name}} <!---- {{propertyName}} -- {{reverse}}-->
+            <div class="col-xs-12 col-sm-12 col-md-8" style="background-color:white; ">
+                <div class="height-40 vertical-align-center thin-gray-botton-border" ng-repeat="record in dataapi | orderBy:propertyName:reverse">
+                    <div class="col-xs-6 col-sm-6 col-md-6 font-blue-bold text-left pad-none" style="padding-top:10px;" ng-bind="record.name">
 
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 text-right">
-                        {{record.availablecash | currency}}
+                    <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="">
+                        <span class="font-black-bold">{{record.availablecash | currency}}</span>
+                        <div ng-class="checkValue(record)"> {{record.percentChange}}% / {{record.valueChange | currency}}</div>
                     </div>
                 </div>
             </div>
