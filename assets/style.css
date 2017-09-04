@@ -8,7 +8,7 @@
     white-space: nowrap;
     vertical-align: middle;
     -ms-touch-action: manipulation;
-    touch-action: manipulation;
+    /*touch-action: manipulation;*/
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -20,7 +20,9 @@
 }
 
 .sortorder:after {
-    content: '\25b2'; /*BLACK UP-POINTING TRIANGLE*/
+    content: '\25b2'; /*BLACK UP-POINTING TRIANGLE 2227*/
+    color: cornflowerblue;
+    /*font: bold 10px arial;*/
 }
 
 .sortorder.vertical-align-bottom:after {
@@ -32,7 +34,9 @@
 }
 
 .sortorder.reverse:after {
-    content: '\25bc'; /*BLACK DOWN-POINTING TRIANGLE*/
+    content: '\25bc'; /*BLACK DOWN-POINTING TRIANGLE 2228 */
+    color: cornflowerblue;
+    /*font: bold 10px arial;*/
 }
 
 .pad-none {
@@ -95,4 +99,7 @@
 
 .thin-gray-botton-border {
     border-bottom: thin solid #DAE3E6;
+}
+.clickable{
+    cursor: pointer;
 }
