@@ -16,17 +16,7 @@ app.controller('DemoAppController', ['$scope', '$http', function ($scope, $http)
         $scope.propertyName = propertyName;
     };
 
-    $http.get('/app/data.json').then(function (response) {
-        console.log(response.data.length);
-        //$scope.dataapi = [];
-        //var counter = 1;
-        //angular.forEach(response.data, function (item) {
-        //    $scope.dataapi.push(item);
-        //    ++counter;
-        //    if(counter > (response.data.length / 2) )
-        //        break;
-
-        //});
+    $http.get('/app/data.json').then(function (response) {        
        $scope.dataapi = response.data;
     }, function (reject) {
         return false;

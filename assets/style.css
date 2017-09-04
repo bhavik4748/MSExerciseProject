@@ -1,28 +1,9 @@
-﻿.btn1 {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    /*touch-action: manipulation;*/
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
+﻿
 .sortorder:after {
-    content: '\25b2'; /*BLACK UP-POINTING TRIANGLE 2227*/
+    /*content: '\25b2';*/ /*BLACK UP-POINTING TRIANGLE 2227*/
+    content: '\2227';
     color: cornflowerblue;
-    /*font: bold 10px arial;*/
+    font: bold 12px arial;
 }
 
 .sortorder.vertical-align-bottom:after {
@@ -34,9 +15,10 @@
 }
 
 .sortorder.reverse:after {
-    content: '\25bc'; /*BLACK DOWN-POINTING TRIANGLE 2228 */
+    /*content: '\25bc';*/ /*BLACK DOWN-POINTING TRIANGLE 2228 */
+    content: '\2228';
     color: cornflowerblue;
-    /*font: bold 10px arial;*/
+    font: bold 12px arial;
 }
 
 .pad-none {
@@ -58,24 +40,25 @@
 .height-40 {
     height: 40px;
 }
+.font-gray{
+    font: bold 11px arial;
+    color:#808080;
+}
 
 .font-bold {
-    font: bold;
-    color: black;
-    font-size: 12px;
+    font: bold 11px arial;
+    color: black;    
 }
 
 .font-blue-bold {
-    font: bold 12px arial;
-    color: cornflowerblue;
-    font-size: 16px;
+    font: bold 14px arial;
+    color: cornflowerblue;   
     vertical-align: middle;
 }
 
 .font-black-bold {
     font: bold 12px arial;
-    color: black;
-    font-size: 14px;
+    color: black;   
     vertical-align: middle;
 }
 
@@ -100,6 +83,11 @@
 .thin-gray-botton-border {
     border-bottom: thin solid #DAE3E6;
 }
-.clickable{
+
+.clickable {
     cursor: pointer;
+}
+
+.line-height-15{
+    line-height: 15px;
 }
