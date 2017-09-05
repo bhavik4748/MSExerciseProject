@@ -1,0 +1,47 @@
+﻿<div class="col-xs-12 col-sm-12 col-md-12" style="padding-top:10px;padding-left:5px; padding-right:5px;">
+    <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+
+    <div class="col-xs-12 col-sm-12 col-md-8 thin-gray-botton-border pad-none" style="background-color:#edf1f1">
+        <div class="col-xs-12 col-sm-12 col-md-12 pad-none">
+            <div ng-click="sortBy('number');bgColor1='#d9d8d8';bgColor2=''" class="col-xs-6 col-sm-6 col-md-6 text-left clickable line-height-15" ng-style="{'background-color': bgColor1}">
+                <span class="font-bold clickable"><br />Account</span>
+                <span class="sortorder" ng-show="propertyName === 'number'" ng-class="{reverse: reverse}"></span>
+            </div>
+
+            <div ng-click="sortBy('availablecash');bgColor1='';bgColor2='#d9d8d8'" class="col-xs-6 col-sm-6 col-md-6 text-right clickable line-height-15" ng-style="{'background-color': bgColor2}">
+                <span class="sortorder vertical-align-center" ng-show="propertyName === 'availablecash'" ng-class="{reverse: reverse}"></span>
+                <span class="font-bold clickable"> Available Cash<br /><span class="font-gray"> Today's Change</span> </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12" style="padding-left:5px; padding-right:5px;">
+    <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+
+    <div class="col-xs-12 col-sm-12 col-md-8 pad-none" style="background-color:white; ">
+        <div class="col-xs-12 col-sm-12 col-md-12 pad-none height-40 thin-gray-botton-border" ng-repeat="record in dataapi | orderBy:propertyName:reverse" ng-if="$index < (dataapi.length / loadAll)">
+            <div class="col-xs-6 col-sm-6 col-md-6 font-blue-bold text-left" style="padding-top:10px;">
+                {{record.name}} - {{record.number}}
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-top:5px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 pad-none  font-black-bold">{{record.availablecash | currency}}</div>
+                <div class="col-xs-12 col-sm-12 col-md-12 pad-none" ng-class="checkValue(record)"> {{record.percentChange > 0 ? '+' : ''}}{{record.percentChange}}% / {{record.valueChange | currency}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12" style="padding-left:5px; padding-right:5px;">
+    <div ng-if="loadAll === 2" class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+
+    <div ng-if="loadAll === 2" class="col-xs-12 col-sm-12 col-md-8 pad-none" style="background-color:white;">
+        <div class="height-40 font-blue text-center clickable" style="padding-top:10px;" ng-click="loadAllFunc()">Load more</div>
+    </div>
+
+    <div ng-if="loadAll === 2" class="col-md-2 hidden-xs hidden-sm">&nbsp;</div>
+</div>
