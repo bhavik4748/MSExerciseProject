@@ -46,13 +46,19 @@
 }
 
 .font-bold {
-    font: bold 11px arial;
+    font: 11px arial;
     color: black;    
 }
 
 .font-blue-bold {
     font: bold 14px arial;
-    color: cornflowerblue;   
+    color: #0D75AC;   
+    vertical-align: middle;
+}
+
+.font-blue {
+    font: 14px arial;
+    color: #0D75AC;   
     vertical-align: middle;
 }
 
@@ -63,13 +69,13 @@
 }
 
 .redfonts {
-    color: #b4051b;
+    color: #f52622;
     font-size: 11px;
     font: bold;
 }
 
 .greenfonts {
-    color: #1ea330;
+    color:#28b20a ;
     font-size: 11px;
     font: bold;
 }
@@ -90,4 +96,5 @@
 
 .line-height-15{
     line-height: 15px;
+    
 }
