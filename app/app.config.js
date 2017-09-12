@@ -35,27 +35,32 @@ app.controller('DemoAppController', ['$scope',  function ($scope) {
 
 app.component('demoComponent', {
     templateUrl: 'app/demoComponent.html',
-    controller: ['$scope',  'dataService', function ($scope,  dataService) {
-        $scope.propertyName = null;
-        $scope.reverse = false;
-        $scope.loadAll = 2;
-        $scope.redfonts = "redfonts";
-        $scope.loadAllFunc = function () {
-            $scope.loadAll = 1;
+    controller: ['dataService', function (dataService) {
+        var ctrl = this;
+
+        ctrl.$onInit = function () {
+            ctrl.propertyName = null;
+            ctrl.reverse = false;
+            ctrl.loadAll = 2;
+            ctrl.redfonts = "redfonts";
         }
 
-        $scope.sortBy = function (propertyName) {
-            $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
-            $scope.propertyName = propertyName;
+        ctrl.loadAllFunc = function () {
+            ctrl.loadAll = 1;
+        }
+
+        ctrl.sortBy = function (propertyName) {
+            ctrl.reverse = (ctrl.propertyName === propertyName) ? !ctrl.reverse : false;
+            ctrl.propertyName = propertyName;
         };
 
         dataService.makeHttpGetRequest().then(function (response) {
-            $scope.dataapi = response.data;
+            ctrl.dataapi = response.data;
         }, function (reject) {
             return false;
         });
 
-        $scope.checkValue = function (val) {
+        ctrl.checkValue = function (val) {
             if (val.percentChange == 0)
                 return 'grayfonts';
             else if (val.percentChange > 0)
