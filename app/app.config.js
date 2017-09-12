@@ -41,14 +41,9 @@ app.component('demoComponent', {
         ctrl.$onInit = function () {
             ctrl.propertyName = null;
             ctrl.reverse = false;
-            ctrl.loadAll = 2;
-            ctrl.redfonts = "redfonts";
+            ctrl.loadAll = 2;            
         }
-
-        ctrl.loadAllFunc = function () {
-            ctrl.loadAll = 1;
-        }
-
+        
         ctrl.sortBy = function (propertyName) {
             ctrl.reverse = (ctrl.propertyName === propertyName) ? !ctrl.reverse : false;
             ctrl.propertyName = propertyName;
